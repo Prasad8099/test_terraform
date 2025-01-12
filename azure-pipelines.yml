@@ -8,7 +8,9 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+  maxParallel: 1  # Ensures no parallel jobs are run in the pool
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+
