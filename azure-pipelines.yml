@@ -6,11 +6,19 @@
 trigger:
 - main
 
-pool:
+pool: 
   vmImage: ubuntu-latest
-  maxParallel: 1  # Ensures no parallel jobs are run in the pool
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+stages:
+- stage: CI
+  jobs:
+  - job: CIWork
+    steps:
+    - script: "Do CI work"
+
+- stage: Test
+  jobs:
+  - job: TestWork
+    steps:
+    - script: "Do test work"
 
