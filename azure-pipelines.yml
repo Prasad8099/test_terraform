@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool: 
-  vmImage: ubuntu-latest
+  vmImage: example-vm
 
 stages:
 - stage: CI
