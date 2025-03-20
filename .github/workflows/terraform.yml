@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy-ec2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       id-token: write
       contents: read
@@ -33,3 +33,5 @@ jobs:
 
       - name: Apply Terraform Configuration
         run: terraform plan
+      - name: hello world setup
+        run: echo "hello world"
