@@ -7,10 +7,7 @@ on:
 
 jobs:
   deploy-ec2:
-    runs-on: self-hosed
-    permissions:
-      id-token: write
-      contents: read
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
